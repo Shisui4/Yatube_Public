@@ -21,6 +21,7 @@ def index(request):
     return render(request, template, context)
 
 
+@cache_page(60, key_prefix='index_page')
 def group_posts(request, slug):
     template = 'posts/group_list.html'
     group = get_object_or_404(Group, slug=slug)
@@ -35,6 +36,7 @@ def group_posts(request, slug):
     return render(request, template, context)
 
 
+@cache_page(60, key_prefix='profile_page')
 def profile(request, username):
     author = get_object_or_404(User, username=username)
     posts_profile = author.posts.all().order_by('-pub_date')
@@ -55,6 +57,7 @@ def profile(request, username):
     return render(request, 'posts/profile.html', context)
 
 
+@cache_page(60 * 5, key_prefix='post_detail_page')
 def post_detail(request, post_id):
     template = 'posts/post_detail.html'
     selected_post = get_object_or_404(Post, id=post_id)
@@ -115,6 +118,7 @@ def add_comment(request, post_id):
 
 
 @login_required
+@cache_page(20, key_prefix='index_follow')
 def follow_index(request):
     follow_post = Post.objects.filter(author__following__user=request.user)
     paginator = Paginator(follow_post, 10)
