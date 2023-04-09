@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     '[::1]',
     'testserver',
+    'www.shisui4.pythonanywhere.com',
+    'shisui4.pythonanywhere.com',
 ]
 
 
