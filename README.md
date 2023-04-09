@@ -11,24 +11,26 @@
 - Clone repository to machine 
 - Установить виртуальное окружения с Python 3.9 командой
 - Install virtual environment with Python 3.9 command
-'''
+ 
+```
 py -3.9 -m venv venv
-''' 
+```
+
 - Запустить виртуальное окружение и установить зависимости командой
 - Run the virtual environment and install the dependencies with the command
-'''
+```
 pip install -r requirements.txt
-''' 
+```
 - Активация виртуального окружения командой
 - Activation of the virtual environment by the command
-''' 
+```
 source venv/Scripts/activate
-''' 
+```
 - Запуск проекта командой:
 - Starting the project with the command: 
-''' 
+```
 python yatube/manage.py runserver
-''' 
+```
 
 
 
