@@ -1,3 +1,19 @@
-# hw05_final
+# yatube_project2.0
+## Social network for posting posts.
+### В проекте используются технологии Django==2.2.19 Python==3.9
 
-[![CI](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw05_final/actions/workflows/python-app.yml)
+
+## Для запуска требуется:
+- Склонировать репозиторий на машину
+- Установить виртуальное окружения с Python 3.9 командой
+'''
+py -3.9 -m venv venv
+''' 
+- Запустить виртуальное окружение и установить зависимости командой
+'''
+pip install -r requirements.txt
+''' 
+ 
+
+
+### Автор _Дивейкус Shisui4 Сергей_
